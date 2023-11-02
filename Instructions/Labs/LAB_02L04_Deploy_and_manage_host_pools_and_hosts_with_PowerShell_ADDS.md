@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Lab: Deploy and manage host pools and hosts by using PowerShell'
-    module: 'Module 2: Implement a WVD Infrastructure'
+    module: 'Module 2: Implement a AVD Infrastructure'
 ---
 
 # Lab - Deploy and manage host pools and hosts by using PowerShell
@@ -10,7 +10,7 @@ lab:
 ## Lab dependencies
 
 - An Azure subscription you will be using in this lab.
-- A Microsoft account or an Azure AD account with the Owner or Contributor role in the Azure subscription you will be using in this lab and with the Global Administrator role in the Azure AD tenant associated with that Azure subscription.
+- A Microsoft account or an Microsoft Entra account with the Owner or Contributor role in the Azure subscription you will be using in this lab and with the Global Administrator role in the Microsoft Entra tenant associated with that Azure subscription.
 - The completed lab **Prepare for deployment of Azure Virtual Desktop (AD DS)**
 
 ## Estimated Time
@@ -78,7 +78,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Ignore any warnings regarding existing PowerShell modules in use.
 
-1. Within the Remote Desktop session to **az140-dc-vm11**, start Microsoft Edge and navigate to the [Azure portal](https://portal.azure.com). If prompted, sign in by using the Azure AD credentials of the user account with the Owner role in the subscription you are using in this lab.
+1. Within the Remote Desktop session to **az140-dc-vm11**, start Microsoft Edge and navigate to the [Azure portal](https://portal.azure.com). If prompted, sign in by using the Microsoft Entra credentials of the user account with the Owner role in the subscription you are using in this lab.
 1. Within the Remote Desktop session to **az140-dc-vm11**, in the Azure portal, use the **Search resources, services, and docs** text box at the top of the Azure portal page to search for and navigate to **Virtual networks** and, on the **Virtual networks** blade, select **az140-adds-vnet11**. 
 1. On the **az140-adds-vnet11** blade, select **Subnets**, on the **Subnets** blade, select **+ Subnet**, on the **Add subnet** blade, specify the following settings (leave all other settings with their default values) and click **Save**:
 
@@ -126,13 +126,13 @@ The main tasks for this exercise are as follows:
 
    > **Note**: The **New-AzWvdHostPool** cmdlet allows you to create a host pool, workspace, and the desktop app group, as well as to register the desktop app group with the workspace. You have the option of creating a new workspace or using an existing one.
 
-1. Within the Remote Desktop session to **az140-dc-vm11**, from the **Administrator: Windows PowerShell ISE** console, run the following to retrieve the objectID attribute of the Azure AD group named **az140-wvd-pooled**:
+1. Within the Remote Desktop session to **az140-dc-vm11**, from the **Administrator: Windows PowerShell ISE** console, run the following to retrieve the objectID attribute of the Microsoft Entra group named **az140-wvd-pooled**:
 
    ```powershell
    $aadGroupObjectId = (Get-AzADGroup -DisplayName 'az140-wvd-pooled').Id
    ```
 
-1. Within the Remote Desktop session to **az140-dc-vm11**, from the **Administrator: Windows PowerShell ISE** console, run the following to assign the Azure AD group named **az140-wvd-pooled** to the default desktop app group of the newly created host pool:
+1. Within the Remote Desktop session to **az140-dc-vm11**, from the **Administrator: Windows PowerShell ISE** console, run the following to assign the Microsoft Entra group named **az140-wvd-pooled** to the default desktop app group of the newly created host pool:
 
    ```powershell
    $roleDefinitionName = 'Desktop Virtualization User'
