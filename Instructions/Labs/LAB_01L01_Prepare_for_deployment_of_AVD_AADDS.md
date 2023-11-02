@@ -1,33 +1,33 @@
 ---
 lab:
     title: 'Lab: Prepare for deployment of Azure Virtual Desktop (Azure AD DS)'
-    module: 'Module 1: Plan a AVD Architecture'
+    module: 'Module 1: Plan an Azure Virtual Desktop Architecture'
 ---
 
-# Lab - Prepare for deployment of Azure Virtual Desktop (Azure AD DS)
+# Lab - Prepare for deployment of Azure Virtual Desktop (Microsoft Entra DS)
 # Student lab manual
 
 ## Lab dependencies
 
 - An Azure subscription
-- A Microsoft account or an Azure AD account with the Global Administrator role in the Azure AD tenant associated with the Azure subscription and with the Owner or Contributor role in the Azure subscription
+- A Microsoft account or an Microsoft Entra ID account with the Global Administrator role in the Azure AD tenant associated with the Azure subscription and with the Owner or Contributor role in the Azure subscription
 
 ## Estimated Time
 
 150 minutes
 
->**Note**: Provisioning of an Azure AD DS takes involves about 90-minute wait time.
+>**Note**: Provisioning of an Microsoft Entra DS takes involves about 90-minute wait time.
 
 ## Lab scenario
 
-You need to prepare for deployment of Azure Virtual Desktop in an Azure Active Directory Domain Services (Azure AD DS) environment
+You need to prepare for deployment of Azure Virtual Desktop in an Microsoft Entra Domain Services environment
 
 ## Objectives
   
 After completing this lab, you will be able to:
 
-- Implement an Azure AD DS domain
-- Configure the Azure AD DS domain environment
+- Implement an Microsoft Entra DS domain
+- Configure the Microsoft Entra DS domain environment
 
 ## Lab files
 
