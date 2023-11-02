@@ -10,7 +10,7 @@ lab:
 ## Lab dependencies
 
 - An Azure subscription you will be using in this lab.
-- A Microsoft account or an Azure AD account with the Owner or Contributor role in the Azure subscription you will be using in this lab and with the Global Administrator role in the Azure AD tenant associated with that Azure subscription.
+- A Microsoft account or an Microsoft Entra account with the Owner or Contributor role in the Azure subscription you will be using in this lab and with the Global Administrator role in the Microsoft Entra tenant associated with that Azure subscription.
 - The completed lab **Prepare for deployment of Azure Virtual Desktop (AD DS)**
 - The completed lab **Implement and manage storage for WVD (AD DS)**
 
@@ -68,7 +68,7 @@ The main tasks for this exercise are as follows:
 
    >**Note**: Wait until the Azure VMs are running before you proceed to the next step.
 
-1. Within the Remote Desktop session to **az140-dc-vm11**, start Microsoft Edge and navigate to the [Azure portal](https://portal.azure.com). If prompted, sign in by using the Azure AD credentials of the user account with the Owner role in the subscription you are using in this lab.
+1. Within the Remote Desktop session to **az140-dc-vm11**, start Microsoft Edge and navigate to the [Azure portal](https://portal.azure.com). If prompted, sign in by using the Microsoft Entra credentials of the user account with the Owner role in the subscription you are using in this lab.
 1. Within the Remote Desktop session to **az140-dc-vm11**, in the Microsoft Edge window displaying the Azure portal, search for and select **Virtual machines** blade and, on the **Virtual machines** blade, select **az140-21-p1-0**.
 1. On the **az140-21-p1-0** blade, select **Connect**, in the drop-down menu, select **RDP**, on the **az140-21-p1-0 \| Connect** blade, in the **IP address** dropdown list, select the **Private IP address** entry, select **Download RDP File**, and then select **Open**.
 1. When prompted, sign in with the following credentials:
@@ -107,7 +107,7 @@ The main tasks for this exercise are as follows:
    Connect-AzAccount
    ```
 
-1. When prompted, sign in with the Azure AD credentials of the user account with the Owner role in the subscription you are using in this lab.
+1. When prompted, sign in with the Microsoft Entra credentials of the user account with the Owner role in the subscription you are using in this lab.
 1. Within the Remote Desktop session to **az140-21-p1-0**, from the **Administrator: Windows PowerShell ISE** script pane, run the following to retrieve the name of the Azure Storage account you configured earlier in this lab:
 
    ```powershell
