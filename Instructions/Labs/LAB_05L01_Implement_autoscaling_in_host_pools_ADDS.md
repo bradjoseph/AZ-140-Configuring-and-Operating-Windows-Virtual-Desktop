@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Lab: Implement autoscaling in host pools (AD DS)'
-    module: 'Module: Monitor and Maintain a WVD Infrastructure'
+    module: 'Module: Monitor and Maintain a AVD Infrastructure'
 ---
 
 # Lab - Implement autoscaling in host pools (AD DS)
@@ -10,7 +10,7 @@ lab:
 ## Lab dependencies
 
 - An Azure subscription you will be using in this lab.
-- A Microsoft account or an Azure AD account with the Owner or Contributor role in the Azure subscription you will be using in this lab and with the Global Administrator role in the Azure AD tenant associated with that Azure subscription.
+- A Microsoft account or an Microsoft Entra account with the Owner or Contributor role in the Azure subscription you will be using in this lab and with the Global Administrator role in the Microsoft Entra tenant associated with that Azure subscription.
 - The completed lab **Prepare for deployment of Azure Virtual Desktop (AD DS)**
 - The completed lab **Deploy host pools and session hosts by using the Azure portal (AD DS)**
 
@@ -74,7 +74,7 @@ The main tasks for this exercise are as follows:
    Connect-AzAccount
    ```
 
-1. When prompted, sign in with the Azure AD credentials of the user account with the Owner role in the subscription you are using in this lab.
+1. When prompted, sign in with the Microsoft Entra credentials of the user account with the Owner role in the subscription you are using in this lab.
 1. Within the Remote Desktop session to **az140-dc-vm11**, from the **Administrator: Windows PowerShell ISE** script pane, run the following to download the PowerShell script you will use to create the Azure Automation account that is part of the autoscaling solution:
 
    ```powershell
@@ -145,7 +145,7 @@ The main tasks for this exercise are as follows:
 
    >**Note**: The output includes a webhook URI, the Log Analytics Workspace ID and the corresponding primary key values that you need to provide when provisioning the Azure Logic App that is part of the autoscaling solution.
 
-1. To verify the configuration of the Azure Automation account, within the Remote Desktop session to **az140-dc-vm11**, start Microsoft Edge and navigate to the [Azure portal](https://portal.azure.com). If prompted, sign in by using the Azure AD credentials of the user account with the Owner role in the subscription you are using in this lab.
+1. To verify the configuration of the Azure Automation account, within the Remote Desktop session to **az140-dc-vm11**, start Microsoft Edge and navigate to the [Azure portal](https://portal.azure.com). If prompted, sign in by using the Microsoft Entra credentials of the user account with the Owner role in the subscription you are using in this lab.
 1. Within the Remote Desktop session to **az140-dc-vm11**, in the Microsoft Edge window displaying the Azure portal, search for and select **Automation accounts** and, on the **Automation accounts** blade, select the entry representing the newly provisioned Azure Automation account (with the name starting with the **az140-automation-51** prefix).
 1. On the Automation Account blade, in the vertical menu on the left side, in the **Process Automation** section, select **Runbooks** and, in the list of runbooks, verify the presence of the **WVDAutoScaleRunbookARMBased** runbook.
 1. On the Automation Account blade, in the vertical menu on the left side, in the **Account Settings** section, select **Run as accounts** and, in the list of accounts on the right side, next to the **Azure Run As Account**, click **+ Create**.
