@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Lab: Deploy host pools and hosts by using Azure Resource Manager templates'
-    module: 'Module 2: Implement a AVD Infrastructure'
+    module: 'Module 2: Implement an AVD Infrastructure'
 ---
 
 # Lab - Deploy host pools and hosts by using Azure Resource Manager templates
